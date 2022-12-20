@@ -2,6 +2,10 @@
     font-size: 16px;
 }
 
+h1, h2, h3, p {
+    margin: 0;
+}
+
 body {
     margin: 0;
 }
@@ -44,11 +48,117 @@ li {
     padding-left: 56px;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 2fr 1fr;
+    place-items: center;
+}
+
+.search-bar-container {
+    display: flex;
 }
 
 .search-bar {
-    background-color: grey;
-    width: 150px;
-    height: 18px;
+    min-width: 400px;
+    background-color: lightgrey;
+    flex: 1;
+    height: 24px;
+    border-radius: 15px;
+}
+
+.alert-container p {
+    font-weight: bold;
+}
+
+.user-greeting-container {
+    justify-self: start;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.user-greeting-container span {
+    font-size: 1rem;
+}
+
+.action-buttons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.action-buttons-container div {
+    border-style: solid;
+    text-align: center;
+    border-radius: 18px;
+    padding: 8px 16px;
+}
+
+/********************** Main Content **********************/
+.main-content-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 40px 20px;
+}
+
+.main-content-container h2 {
+    margin-bottom: 16px;
+}
+
+.projects-container {
+    grid-row: span 2;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+}
+
+.card {
+    height: 180px;
+    border-style: solid;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.announcements-container{
+    margin-right: 30px;
+}
+
+.announcements {
+    border-style: solid;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.announcements div {
+    margin-bottom: 12px;
+}
+
+.announcements div:last-child{
+    margin-bottom: 0;
+}
+
+.announcements div:nth-child(2) {
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: lightgrey;
+}
+
+.announcement {
+    padding: 14px;
+}
+
+.trending-container {
+    border-style: solid;
+    border-radius: 8px;
+    padding: 24px;
+    margin-right: 30px;
+}
+
+.trending-card {
+    margin-bottom: 12px;
+}
+
+.trending-card:last-child {
+    margin-bottom: 0;
 }
