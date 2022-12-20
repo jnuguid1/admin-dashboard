@@ -1,9 +1,54 @@
+:root {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 4fr;
 }
 
+/******************* Sidebar ***********************/
+
 .sidebar-container {
     grid-row: 1 / span 2;
+    padding-left: 16px;
+    padding-right: 18px;
+}
+
+.sidebar-container div,
+.sidebar-container ul {
+    margin-bottom: 56px;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.sidebar-container li {
+    font-size: 1rem;
+    padding: 4px 0;
+    margin-bottom: 8px;
+}
+
+/********************** Header **********************/
+.header-container {
+    padding-left: 56px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 2fr 2fr;
+}
+
+.search-bar {
+    background-color: grey;
+    width: 150px;
+    height: 18px;
 }
